@@ -15,6 +15,8 @@
 #include <fmt/core.h>
 #include <fmt/compile.h>
 
+#include <libxml/xmlerror.h>
+
 // C-style callback functions are called from xmlOutputBufferCreateIO.
 // Functions cannot throw, return -1 if an error occurred.
 static int wrap_write(void *context, const char *buffer, int len) noexcept {
